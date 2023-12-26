@@ -1,0 +1,57 @@
+<script src="https://cdn.jsdelivr.net/npm/@openai/gpt-3.5-turbo"></script>
+<html>
+<head>
+    <title>Sudoku game</title>
+    <style>
+        .board {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+            gap: 2px;
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+        }
+
+        .cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .cell.filled {
+            background-color: #ddd;
+        }
+
+        .cell.selected {
+            background-color: #aaf;
+        }
+
+        .cell.correct {
+            background-color: #afa;
+        }
+
+        .cell.incorrect {
+            background-color: #faa;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="board"></div>
+    <button class="button solve-button">Solve</button>
+    <button class="button clear-button">Clear</button>
+    <script src="sudoku.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@openai/gpt-3.5-turbo"></script>
+</body>
+</html>
